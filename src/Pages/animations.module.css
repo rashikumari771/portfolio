@@ -1,0 +1,119 @@
+.animate_left::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 200%;
+  height: 100%;
+  background: linear-gradient(
+    to left,
+    hsl(224, 47%, 97%) 0%,
+    hsl(231, 47%, 97%) 50%,
+    hsl(224, 29%, 15%) 50%,
+    hsl(231, 29%, 15%) 100%
+  );
+  z-index: 1;
+  opacity: 0;
+  animation: disclose-left 0.5s cubic-bezier(0.19, 0.85, 0.71, 0.15);
+}
+
+@keyframes disclose-left {
+  0% {
+    left: -100%;
+    opacity: 1;
+  }
+  100% {
+    left: 100%;
+    opacity: 1;
+  }
+}
+
+.animate_right::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 200%;
+  height: 100%;
+  background: linear-gradient(
+    to right,
+    hsl(231, 47%, 97%) 0%,
+    hsl(231, 47%, 97%) 50%,
+    hsl(224, 29%, 15%) 50%,
+    hsl(224, 29%, 15%) 100%
+  );
+  z-index: 1;
+  opacity: 0;
+  animation: disclose-right 0.5s cubic-bezier(0.19, 0.85, 0.71, 0.15);
+}
+
+@keyframes disclose-right {
+  0% {
+    right: -100%;
+    opacity: 1;
+  }
+  100% {
+    right: 100%;
+    opacity: 1;
+  }
+}
+
+.animate_top::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 200%;
+  background: linear-gradient(
+    to bottom,
+    hsl(224, 29%, 15%) 0%,
+    hsl(224, 29%, 15%) 50%,
+    hsl(231, 47%, 97%) 50%,
+    hsl(231, 47%, 97%) 100%
+  );
+  z-index: 1;
+  opacity: 0;
+  animation: disclose-top 0.5s cubic-bezier(0.19, 0.85, 0.71, 0.15);
+}
+
+@keyframes disclose-top {
+  0% {
+    top: -100%;
+    opacity: 1;
+  }
+  100% {
+    top: 100%;
+    opacity: 1;
+  }
+}
+
+.animate_bottom::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 200%;
+  background: linear-gradient(
+    to top,
+    hsl(224, 29%, 15%) 0%,
+    hsl(224, 29%, 15%) 50%,
+    hsl(231, 47%, 97%) 50%,
+    hsl(231, 47%, 97%) 100%
+  );
+  z-index: 1;
+  opacity: 0;
+  animation: disclose-bottom 0.5s cubic-bezier(0.19, 0.85, 0.71, 0.15);
+}
+
+@keyframes disclose-bottom {
+  0% {
+    bottom: -100%;
+    opacity: 1;
+  }
+  100% {
+    bottom: 100%;
+    opacity: 1;
+  }
+}

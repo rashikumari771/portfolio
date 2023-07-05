@@ -1,0 +1,243 @@
+.about {
+  height: 100%;
+  min-height: 100dvh;
+  width: 100%;
+  background-color: hsl(232, 50%, 97%);
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.about *::selection {
+  background-color: hsla(168, 100%, 33%, 0.2);
+  color: hsl(224, 29%, 15%);
+}
+
+.about .container {
+  width: 100%;
+  height: 100%;
+  max-width: 1100px;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  padding: 0 1rem;
+}
+
+.container .right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  position: relative;
+  overflow: hidden;
+}
+
+.about .title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
+  font-family: sans-serif;
+  margin: 0;
+  color: hsl(168, 100%, 33%);
+}
+
+.about .description {
+  max-width: 600px;
+  z-index: 1;
+  font-size: 1.2rem;
+  font-weight: 400;
+  letter-spacing: 0.05rem;
+  line-height: 1.6;
+  text-align: right;
+  margin-bottom: 2rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.about .description span {
+  position: relative;
+  z-index: 1;
+  white-space: pre-wrap;
+}
+
+/* a light highlight from middle to bottom of text */
+.about .description span::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: -0.18rem;
+  width: calc(100% + 0.37rem);
+  height: 0.5rem;
+  background-color: hsla(168, 100%, 38%, 0.2);
+  z-index: 0;
+}
+
+.infoContainer {
+  display: grid;
+  width: 100%;
+  max-width: 700px;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.infoContainer .info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  text-align: end;
+  gap: 0.3rem;
+  position: relative; /* For animation */
+  overflow: hidden; /* For animation */
+}
+
+.infoContainer .info h2 {
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 0.1rem;
+  margin: 0;
+  color: hsl(224, 29%, 15%);
+  text-transform: uppercase;
+}
+
+.infoContainer .info p {
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.6;
+  letter-spacing: 0.05rem;
+  margin: 0;
+  color: hsla(225, 29%, 23%, 0.9);
+  position: relative; /* For animation */
+  overflow: hidden; /* For animation */
+}
+
+.infoContainer .info p span {
+  font-size: 0.8rem;
+  color: hsl(224, 29%, 15%);
+  background-color: hsla(161, 86%, 44%, 0.2);
+  padding: 0.2rem 0.3rem;
+  border-radius: 0.5rem;
+  white-space: nowrap;
+}
+
+.left {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.left .imageContainer {
+  height: 380px;
+  width: 270px;
+  border-radius: 50% 50% 50% 50% / 35% 35% 35% 35%;
+  object-fit: cover;
+  -webkit-user-drag: none;
+  position: relative;
+  z-index: 1;
+}
+
+.left .imageContainer::before {
+  content: "";
+  position: absolute;
+  border: 0.3rem solid hsl(224, 29%, 15%);
+  border-radius: 50% 50% 50% 50% / 35% 35% 35% 35%;
+  top: -1rem;
+  left: -1rem;
+  width: calc(100% + 6px);
+  height: calc(100% + 1rem);
+  z-index: -1;
+}
+
+.left .imageContainer img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: 50% 0%;
+  border-radius: 50% 50% 50% 50% / 35% 35% 35% 35%;
+  -webkit-user-drag: none;
+  transform-style: preserve-3d;
+  transform: rotateY(0deg);
+  transition: transform 0.5s ease-in-out;
+}
+
+.stars {
+  position: absolute;
+  height: 3rem;
+  width: 3rem;
+  -webkit-user-drag: none;
+  color: hsl(168, 100%, 33%);
+}
+
+.stars:hover {
+  animation: growAndShrink 0.5s ease-in-out 1;
+}
+
+.stars:nth-of-type(1) {
+  top: 0;
+  left: 0;
+}
+
+.stars:nth-of-type(2) {
+  height: 2rem;
+  width: 2rem;
+  bottom: 3rem;
+  right: 0;
+}
+
+@keyframes growAndShrink {
+  0% {
+    transform: scale(1);
+  }
+  30% {
+    transform: scale(1.2);
+  }
+  60% {
+    transform: scale(1);
+  }
+  75% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@media (max-width: 820px) {
+  .about {
+    height: auto;
+    min-height: 100dvh;
+    padding: 4rem 0;
+  }
+
+  .left {
+    display: none;
+  }
+
+  .about .description {
+    max-width: 100%;
+    text-align: left;
+  }
+
+  .about .container {
+    padding: 0 1.2rem;
+  }
+
+  .about .container .title {
+    width: 100%;
+  }
+
+  .infoContainer {
+    width: 100%;
+    max-width: 100%;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .infoContainer .info {
+    align-items: flex-start;
+    text-align: start;
+  }
+}
+

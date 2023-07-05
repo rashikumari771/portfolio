@@ -1,0 +1,27 @@
+.footer {
+  width: 100%;
+  height: 100%;
+  padding: 2rem 1rem;
+  background-color: hsl(225, 29%, 13%);
+  color: hsl(231, 47%, 97%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer *::selection {
+  background-color: hsl(161, 86%, 44%);
+  color: hsl(224, 29%, 15%);
+}
+
+.copyright {
+  font-size: 0.8rem;
+  font-weight: 400;
+  letter-spacing: 0.1rem;
+  margin: 0;
+  padding: 0 1rem;
+  text-transform: capitalize;
+  text-align: center;
+  color: hsl(231, 47%, 83%);
+}

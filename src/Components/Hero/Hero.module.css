@@ -1,0 +1,351 @@
+@import url("https://fonts.googleapis.com/css2?family=Yellowtail&display=swap");
+
+.hero {
+  width: 100%;
+  height: 100%;
+  min-height: 100dvh;
+  gap: 0.2rem;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: hsl(225, 29%, 13%);
+  color: hsl(225, 29%, 97%);
+  overflow: hidden;
+}
+
+.hero *::selection {
+  background-color: hsl(161, 86%, 44%);
+  color: hsl(224, 29%, 15%);
+}
+
+.signature {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* send it behind everything as an overlay */
+  z-index: 1;
+}
+
+.signature div {
+  letter-spacing: 0.06rem;
+  font-size: 20rem;
+  font-weight: 400;
+  font-family: "Yellowtail", cursive;
+  margin: 0;
+  position: relative;
+  -webkit-user-select: none;
+  user-select: none;
+  color: hsl(225, 29%, 15%);
+  transition: font-family 0.5s ease-in-out;
+}
+
+.signature div:nth-of-type(1) {
+  transform: translate(-16rem, 5rem) rotate(-25deg);
+}
+
+.signature div:nth-of-type(2) {
+  transform: translate(16rem, -5rem) rotate(-25deg);
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100dvh;
+  z-index: 5;
+}
+
+.techlogo {
+  position: absolute;
+  height: 2.5rem;
+  width: 2.5rem;
+  padding: 0.1rem;
+  border-radius: 50%;
+  background-color: hsl(225, 29%, 50%);
+  -webkit-user-select: none;
+  user-select: none;
+  z-index: 10;
+}
+
+.techlogo img {
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center;
+  padding: 0.1rem;
+  background-color: hsl(225, 29%, 13%);
+}
+
+.techlogo:nth-of-type(1) {
+  top: 20%;
+  left: 50%;
+}
+
+.techlogo:nth-of-type(2) {
+  top: 20%;
+  left: 50%;
+}
+
+.techlogo:nth-of-type(3) {
+  top: 80%;
+  left: 35%;
+}
+
+.techlogo:nth-of-type(4) {
+  top: 50%;
+  left: 90%;
+}
+
+.techlogo:nth-of-type(5) {
+  top: 20%;
+  left: 90%;
+}
+
+.techlogo:hover {
+  animation: growAndShrinkWithWobble 0.5s ease-in-out;
+}
+
+.techlogo .techinfo {
+  opacity: 0;
+  position: absolute;
+  width: max-content;
+  background-color: hsl(225, 29%, 23%);
+  color: hsl(232, 50%, 97%);
+  padding: 0.3rem;
+  border-radius: 0.3rem;
+  font-size: 0.8rem;
+  font-weight: 400;
+  letter-spacing: 0.05rem;
+  top: 130%;
+  left: 50%;
+  transform: translateX(-30%);
+  pointer-events: none;
+}
+
+.techlogo:nth-child(2) .techinfo {
+  transform: translateX(-90%);
+}
+
+.techlogo:hover .techinfo {
+  opacity: 1;
+}
+
+@keyframes growAndShrinkWithWobble {
+  0% {
+    transform: scale(1);
+  }
+  30% {
+    transform: scale(1.2);
+  }
+  60% {
+    transform: scale(1);
+  }
+  80% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.nav {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 3rem;
+  z-index: 10;
+}
+
+.nav .navbar {
+  max-width: 1024px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar .logo {
+  font-size: 1.3rem;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+.navbar .logo span {
+  color: hsl(161, 86%, 44%);
+  font-family: "Yellowtail", cursive;
+  font-size: 1.5rem;
+}
+
+.navbar ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar ul li a {
+  margin: 0 0.5rem;
+  text-decoration: none;
+  color: hsl(225, 29%, 98%);
+  font-family: sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  letter-spacing: 0.05rem;
+  transition: color 0.2s ease-in-out;
+}
+
+.navbar ul li a:hover {
+  color: hsl(225, 29%, 50%);
+}
+
+.navbar ul li a.active {
+  color: hsl(225, 29%, 50%);
+}
+
+.navbar ul li:first-of-type a {
+  color: hsl(161, 86%, 44%);
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 0.2rem;
+  z-index: 5;
+}
+
+.left {
+  /* position: relative;
+  z-index: 6; */
+}
+
+.left > p {
+  font-family: monospace;
+  font-size: 1rem;
+  font-weight: 400;
+  letter-spacing: 0.05rem;
+  margin: 0;
+  line-height: 1.6;
+}
+
+.container h1 {
+  font-family: sans-serif;
+  letter-spacing: 0.2rem;
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  margin-top: 0.2rem;
+  margin-left: -0.2rem;
+}
+
+.container h1 span {
+  color: hsl(161, 86%, 44%);
+}
+
+.container h2 {
+  font-family: sans-serif;
+  font-size: 1.4rem;
+  font-weight: 400;
+  letter-spacing: 0.1rem;
+  line-height: 1.5;
+  margin: 0;
+  display: inline-flex;
+  line-height: 1.6;
+  gap: 0.5rem;
+  overflow: hidden;
+  margin-left: 0.1rem;
+}
+
+/* H2 Animation code */
+.typewriter {
+  font-family: sans-serif;
+  font-size: 1.5rem;
+  font-weight: 600;
+  letter-spacing: 0.1rem;
+  line-height: 1.5;
+  height: 2.25rem;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
+.typewriter li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  top: 0;
+  animation: slide 9s steps(3) infinite;
+}
+
+@keyframes slide {
+  100% {
+    top: -6.85rem;
+  }
+}
+
+.typewriter li span {
+  position: relative;
+  white-space: nowrap;
+}
+
+.typewriter li span::after {
+  content: "";
+  width: 100%;
+  height: 2.25rem;
+  position: absolute;
+  left: 0;
+  background-color: hsl(225, 29%, 13%);
+  /* border-left: 3px solid hsl(161, 86%, 44%); */
+  animation: typing 3s ease infinite;
+}
+
+@keyframes typing {
+  0% {
+    left: 0;
+  }
+  50% {
+    left: 100%;
+  }
+  100% {
+    left: 0;
+  }
+}
+
+/* H2 Animation Code Ends */
+
+.left .actions {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 1.5rem;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.actions .btn_background {
+  background-color: hsl(161, 86%, 44%);
+  padding: 0.5rem 0.8rem;
+  border-radius: 0.4rem;
+  color: hsl(225, 29%, 13%);
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 0.08rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: background-color 0.2s ease-in-out;
+}
