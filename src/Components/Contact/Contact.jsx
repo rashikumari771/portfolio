@@ -23,7 +23,7 @@ const Contact = () => {
     if (name && message) {
       setError("");
       window.open(
-        `mailto:jindalujjwal0720@gmail.com?subject=Message from ${name}&body=${message}`
+        `mailto:rashikumari617@gmail.com?subject=Message from ${name}&body=${message}`
       );
     } else if (!name) {
       setError("Without a name, I won't know who to reply to :(");
@@ -34,7 +34,7 @@ const Contact = () => {
 
   const handleResumeDownload = () => {
     window.open(
-      "https://docs.google.com/document/d/1bbRtI3ESLcfV8I-tzsiRg9ftvPvcm3w0PEs2r8qqlH0/edit?usp=sharing"
+      "https://docs.google.com/document/d/1AaYgsgg2NxvS0DgAq643yKhJo1A-2p6QS9PV0rkx1Ao/edit"
     );
   };
 
@@ -53,8 +53,7 @@ const Contact = () => {
           <div className={styles.address}>
             <IoLocationOutline className={styles.icon} />
             <span>
-              7/180 - Jindal Nivas(Opp Aggarwal Dharamshala), Saharanpur, Uttar
-              Pradesh, India.
+                 Puraini Bazar Madhepura marwari Tola, Bihar,pin: 852116
             </span>
           </div>
           <div className={styles.callToActions}>
@@ -106,7 +105,7 @@ const Contact = () => {
           </h2>
           <div className={styles.social}>
             <a
-              href="https://www.linkedin.com/in/jindalujjwal0720/"
+              href="https://www.linkedin.com/in/rashi-kumari-55b0471bb/"
               target="_blank"
               rel="noreferrer"
             >
@@ -114,7 +113,7 @@ const Contact = () => {
             </a>
             <a
               href="
-                    https://www.github.com/jindalujjwal0720/"
+                     https://github.com/rashikumari771"
               target="_blank"
               rel="noreferrer"
             >
@@ -122,31 +121,31 @@ const Contact = () => {
             </a>
             <a
               href="mailto:
-                            jindalujjwal0720@gmail.com"
+                            rashikumari617@gmail.com"
               target="_blank"
               rel="noreferrer"
             >
               <BiLogoGmail className={styles.icon} />
             </a>
-            <a href="tel:+91 7906347915" target="_blank" rel="noreferrer">
+            <a href="tel:+91 9798592141" target="_blank" rel="noreferrer">
               <AiTwotonePhone className={styles.icon} />
             </a>
             <a
-              href="https://www.codeforces.com/profile/leafpetal"
+              href="https://codeforces.com/profile/20je0771"
               target="_blank"
               rel="noreferrer"
             >
               <SiCodeforces className={styles.icon} />
             </a>
             <a
-              href="https://www.codechef.com/users/leafpetal"
+              href="https://www.codechef.com/users/rashiagwl2002"
               target="_blank"
               rel="noreferrer"
             >
               <SiCodechef className={styles.icon} />
             </a>
             <a
-              href="https://www.leetcode.com/leafpetal"
+              href="https://leetcode.com/rashi_kumari12344/"
               target="_blank"
               rel="noreferrer"
             >
