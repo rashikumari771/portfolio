@@ -50,8 +50,9 @@ const Hero = () => {
   return (
     <div className={styles.hero} id="home">
       <div ref={signatureRef} className={styles.signature}>
-        <div>Rashi</div>
-        <div>Kumari</div>
+        {/* if you want to add signature uncomment below lines */}
+        {/* <div>Rashi</div>
+        <div>Kumari</div> */}
       </div>
       {logos.map((logo, index) => (
         <div className={styles.techlogo} key={index}>
@@ -62,7 +63,7 @@ const Hero = () => {
       <nav className={styles.nav}>
         <div className={styles.navbar}>
           <div className={styles.logo}>
-            <span>kumari</span>
+            {/* <span>kumari</span> */}
           </div>
           <ul>
             <li>

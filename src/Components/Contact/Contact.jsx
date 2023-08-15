@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./Contact.module.css";
-import Map from "./../../Assets/images/map.png";
+import Map from "./../../Assets/images/map.jpg";
 import { IoLocationOutline } from "react-icons/io5";
 import { FaMapMarkerAlt } from "react-icons/fa";
 import { SiCodeforces } from "react-icons/si";
@@ -9,7 +9,7 @@ import { SiLeetcode } from "react-icons/si";
 import { BiLogoLinkedin, BiLogoGmail } from "react-icons/bi";
 import { BsGithub } from "react-icons/bs";
 import { AiTwotonePhone } from "react-icons/ai";
-import Resume from "./../../Assets/images/Resume.png";
+import Resume from "./../../Assets/images/Resume.jpg";
 
 const Contact = () => {
   const nameRef = React.useRef(null);
@@ -34,12 +34,12 @@ const Contact = () => {
 
   const handleResumeDownload = () => {
     window.open(
-      "https://docs.google.com/document/d/1AaYgsgg2NxvS0DgAq643yKhJo1A-2p6QS9PV0rkx1Ao/edit"
+      "https://docs.google.com/document/d/1veYmYB4vWrUtPtzSwjJwqtPfa7wPXy_LMo10zcSbsJg/edit?usp=sharing"
     );
   };
 
   const handleMapEvents = () => {
-    window.open("https://goo.gl/maps/UACW57bWWUvjwxvFA");
+    window.open("https://goo.gl/maps/pvVxRZBYbdg2BfWR9");
   };
 
   return (
@@ -53,7 +53,7 @@ const Contact = () => {
           <div className={styles.address}>
             <IoLocationOutline className={styles.icon} />
             <span>
-                 Puraini Bazar Madhepura marwari Tola, Bihar,pin: 852116
+                Puraini Bazar Madhepura marwari Tola Bihar India-852116
             </span>
           </div>
           <div className={styles.callToActions}>

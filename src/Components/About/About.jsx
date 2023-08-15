@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import styles from "./About.module.css";
-import UjjwalImage from "./../../Assets/images/ujjwal.png";
+import rashiImage from "./../../Assets/images/rashi.jpg";
 import { BsStars } from "react-icons/bs";
 import { IoSparklesOutline } from "react-icons/io5";
 import { useIntersectionObserver, animateOnVisible } from "./../../Pages/utils";
@@ -57,7 +57,7 @@ const About = () => {
       <div className={styles.container}>
         <div className={styles.left}>
           <div className={styles.imageContainer}>
-            <img src={UjjwalImage} alt="Ujjwal Jindal" />
+            <img src={rashiImage} alt="Ujjwal Jindal" />
             <BsStars className={styles.stars} />
             <IoSparklesOutline className={styles.stars} size={50} />
           </div>
