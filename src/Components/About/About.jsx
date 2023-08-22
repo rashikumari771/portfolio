@@ -67,11 +67,11 @@ const About = () => {
           <p ref={descriptionRef} className={styles.description}>
             I am a <span>creative problem solver</span> and software engineer
             who thrives on innovation. I love learning, collaborating, and
-            taking on challenges. Originally from Saharanpur, Uttar Pradesh,
+            taking on challenges. Originally from Bhagalpur, Bihar,
             India, I <span>enjoy</span> <span>exploring</span> <span>new</span>{" "}
             <span>ideas</span> and creating meaningful experiences.
             <br />
-            In my free time, I indulge in music and competitive programming. I
+            In my free time, I indulge in music chess and competitive programming. I
             am driven, creative, and passionate about <span>making</span>{" "}
             <span>a</span> <span>positive</span> <span>impact </span>
             through technology.
@@ -79,7 +79,7 @@ const About = () => {
           <div className={styles.infoContainer}>
             <div className={styles.info}>
               <h2>Name</h2>
-              <p ref={nameRef}>Ujjwal Jindal</p>
+              <p ref={nameRef}>Rashi Kumari</p>
             </div>
             <div className={styles.info}>
               <h2>Education</h2>
@@ -90,11 +90,11 @@ const About = () => {
             </div>
             <div className={styles.info}>
               <h2>Email</h2>
-              <p ref={emailRef}>jindalujjwal0720@gmail.com</p>
+              <p ref={emailRef}>rashikumari771@gmail.com</p>
             </div>
             <div className={styles.info}>
               <h2>Phone</h2>
-              <p ref={phoneRef}>+91 7906347915</p>
+              <p ref={phoneRef}>+91 9798592141</p>
             </div>
           </div>
         </div>
