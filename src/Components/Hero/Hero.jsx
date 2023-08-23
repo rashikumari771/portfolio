@@ -1,26 +1,10 @@
-import React, { useEffect } from "react";
+import React from "react";
 import styles from "./Hero.module.css";
 import JSLogo from "./../../Assets/images/js.png";
 import ReactLogo from "./../../Assets/images/react.png";
 import FlutterLogo from "./../../Assets/images/flutter.png";
 
 const Hero = () => {
-  const signatureRef = React.createRef(null);
-
-  // for the signature parallax effect
-  useEffect(() => {
-    const signature = signatureRef.current;
-    window.addEventListener("scroll", () => {
-      const value = window.scrollY;
-      signature.style.transform = `translate3d(-50%, calc(-50% + ${
-        value * 0.5
-      }px), 0)`;
-    });
-    return () => {
-      window.removeEventListener("scroll", () => {});
-    };
-  }, [signatureRef]);
-
   const logos = [
     {
       src: JSLogo,
@@ -49,21 +33,10 @@ const Hero = () => {
 
   return (
     <div className={styles.hero} id="home">
-      <div ref={signatureRef} className={styles.signature}>
-        {/* if you want to add signature uncomment below lines */}
-        {/* <div>Rashi</div>
-        <div>Kumari</div> */}
-      </div>
-      {logos.map((logo, index) => (
-        <div className={styles.techlogo} key={index}>
-          <img src={logo.src} alt={logo.alt} />
-          <div className={styles.techinfo}>{logo.info}</div>
-        </div>
-      ))}
       <nav className={styles.nav}>
         <div className={styles.navbar}>
           <div className={styles.logo}>
-            {/* <span>kumari</span> */}
+            {/* <span>Singh</span> */}
           </div>
           <ul>
             <li>
@@ -115,7 +88,16 @@ const Hero = () => {
             </a>
           </div>
         </div>
-        <div className={styles.right}></div>
+        <div className={styles.right}>
+        <div className={styles.techlogocontainer}>
+        {logos.map((logo, index) => (
+        <div className={styles.techlogo} key={index}>
+          <img src={logo.src} alt={logo.alt} />
+          <div className={styles.techinfo}>{logo.info}</div>
+        </div>
+        ))}
+       </div>
+        </div>
       </div>
     </div>
   );

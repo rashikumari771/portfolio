@@ -58,16 +58,23 @@
   z-index: 5;
 }
 
+.techlogocontainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  height: 3rem;
+  width:20rem;
+}
 .techlogo {
-  position: absolute;
-  height: 2.5rem;
-  width: 2.5rem;
-  padding: 0.1rem;
-  border-radius: 50%;
-  background-color: hsl(225, 29%, 50%);
-  -webkit-user-select: none;
-  user-select: none;
-  z-index: 10;
+    height: 100%;
+    width: 100%;
+    padding: 0.1rem;
+    border-radius: 50%;
+    background-color: hsl(225, 29%, 50%);
+    -webkit-user-select: none;
+    user-select: none;
+    z-index: 10;
 }
 
 .techlogo img {
@@ -81,28 +88,38 @@
 }
 
 .techlogo:nth-of-type(1) {
-  top: 20%;
-  left: 50%;
+  margin-top: 1rem; /* Adjust the margins as needed */
+  margin-right: 2rem;
+  margin-bottom: 1rem;
+  margin-left: 2rem;
 }
 
 .techlogo:nth-of-type(2) {
-  top: 20%;
-  left: 50%;
+  margin-top: 1rem; /* Adjust the margins as needed */
+  margin-right: 2rem;
+  margin-bottom: 1rem;
+  margin-left: 2rem;
 }
 
 .techlogo:nth-of-type(3) {
-  top: 80%;
-  left: 35%;
+  margin-top: 1rem; /* Adjust the margins as needed */
+  margin-right: 2rem;
+  margin-bottom: 1rem;
+  margin-left: 2rem;
 }
 
 .techlogo:nth-of-type(4) {
-  top: 50%;
-  left: 90%;
+  margin-top: 1rem; /* Adjust the margins as needed */
+  margin-right: 1rem;
+  margin-bottom: 1rem;
+  margin-left: 1rem;
 }
 
 .techlogo:nth-of-type(5) {
-  top: 20%;
-  left: 90%;
+  margin-top: 1rem; /* Adjust the margins as needed */
+  margin-right: 1rem;
+  margin-bottom: 1rem;
+  margin-left: 1rem;
 }
 
 .techlogo:hover {
