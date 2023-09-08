@@ -34,7 +34,7 @@ const Contact = () => {
 
   const handleResumeDownload = () => {
     window.open(
-      "https://docs.google.com/document/d/1veYmYB4vWrUtPtzSwjJwqtPfa7wPXy_LMo10zcSbsJg/edit?usp=sharing"
+      "https://docs.google.com/document/d/1_CCCKKSghk7VlfSk0WWlO6YawR2JNMe8VaIFMphTFJE/edit"
     );
   };
 
